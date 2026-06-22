@@ -167,6 +167,25 @@ section{padding:56px 24px}
 .premium-divider{text-align:center;margin:8px 0 36px}
 .premium-divider span{display:inline-block;background:linear-gradient(90deg,var(--gold),var(--gold-light));color:#3a2400;font-size:11px;font-weight:700;padding:5px 20px;border-radius:20px;letter-spacing:.1em}
 
+
+/* CONTACT */
+.contact-section{background:#fff;padding:56px 24px}
+.contact-form{max-width:560px;margin:0 auto}
+.form-group{margin-bottom:20px}
+.form-label{display:block;font-size:13px;font-weight:700;color:var(--text2);margin-bottom:6px}
+.required{background:var(--pink-deep);color:#fff;font-size:10px;padding:2px 7px;border-radius:10px;margin-left:6px;font-weight:700;vertical-align:middle}
+.form-input{width:100%;padding:12px 14px;border:1.5px solid #f0d8e0;border-radius:8px;font-size:14px;font-family:var(--sans);color:var(--text);background:#fff;outline:none;transition:border-color .2s}
+.form-input:focus{border-color:var(--pink-mid)}
+.form-textarea{width:100%;padding:12px 14px;border:1.5px solid #f0d8e0;border-radius:8px;font-size:14px;font-family:var(--sans);color:var(--text);background:#fff;outline:none;min-height:140px;resize:vertical;transition:border-color .2s}
+.form-textarea:focus{border-color:var(--pink-mid)}
+.form-submit-wrap{text-align:center;margin-top:28px}
+.form-btn{background:var(--pink-deep);color:#fff;border:none;padding:14px 48px;border-radius:30px;font-size:14px;font-weight:700;font-family:var(--sans);letter-spacing:.08em;cursor:pointer;transition:background .2s}
+.form-btn:hover{background:var(--rose-dark)}
+.form-btn:disabled{background:#ccc;cursor:not-allowed}
+.form-note{text-align:center;font-size:13px;margin-top:16px;min-height:20px}
+.form-note.success{color:var(--pink-deep);font-weight:700}
+.form-note.error{color:#c25a5a}
+
 /* CTA */
 .cta-section{background:linear-gradient(135deg,var(--pink-deep) 0%,var(--rose-dark) 100%);padding:56px 24px;text-align:center}
 .cta-section h2{font-family:var(--serif);color:#fff;font-size:clamp(18px,4vw,26px);font-weight:700;line-height:1.6;margin-bottom:16px}
@@ -185,7 +204,7 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
 
 <!-- NAV -->
 <nav>
-  <span class="nav-logo">お受験ガイド｜山口健太</span>
+  <span class="nav-logo">お受験ガイド</span>
   <a href="https://note.com/mezasegokaku/membership" class="nav-cta" target="_blank">今すぐ読む →</a>
 </nav>
 
@@ -376,6 +395,44 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
   </div>
 </section>
 
+
+<!-- CONTACT -->
+<section class="contact-section">
+  <p class="section-eyebrow">CONTACT</p>
+  <h2 class="section-title">お問い合わせ</h2>
+  <p class="section-lead">メンバーシップやサービスに関するご質問は、下記フォームよりお気軽にどうぞ。通常2営業日以内にご返信いたします。</p>
+  <div class="section-divider"></div>
+  <form class="contact-form" id="contact-form" onsubmit="sendMail(event)">
+    <div class="form-group">
+      <label class="form-label">お名前 <span class="required">必須</span></label>
+      <input type="text" class="form-input" id="f-name" placeholder="山田 花子" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">メールアドレス <span class="required">必須</span></label>
+      <input type="email" class="form-input" id="f-email" placeholder="example@email.com" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">お問い合わせ種別</label>
+      <select class="form-input" id="f-type">
+        <option value="">選択してください</option>
+        <option value="メンバーシップについて">メンバーシップについて</option>
+        <option value="個別相談プランについて">個別相談プランについて</option>
+        <option value="フルサービスプランについて">フルサービスプランについて</option>
+        <option value="記事内容について">記事内容について</option>
+        <option value="その他">その他</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">お問い合わせ内容 <span class="required">必須</span></label>
+      <textarea class="form-textarea" id="f-message" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+    </div>
+    <div class="form-submit-wrap">
+      <button type="submit" class="form-btn" id="f-btn">送信する</button>
+    </div>
+    <p class="form-note" id="f-status"></p>
+  </form>
+</section>
+
 <!-- CTA -->
 <section class="cta-section">
   <h2>遠回りせず、<em>最短距離で合格</em>を目指すご家庭へ</h2>
@@ -387,7 +444,7 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
 </section>
 
 <footer>
-  <p>© お受験ガイド編集長 山口健太 ｜ <a href="https://note.com/mezasegokaku" target="_blank">note.com/mezasegokaku</a></p>
+  <p>© お受験ガイド ｜ <a href="https://note.com/mezasegokaku" target="_blank">note.com/mezasegokaku</a></p>
 </footer>
 
 <script>
@@ -418,12 +475,12 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
   function rel(d){var dt=new Date(d);if(isNaN(dt))return"";var diff=Math.floor((Date.now()-dt)/1000);if(diff<3600)return Math.floor(diff/60)+"分前";if(diff<86400)return Math.floor(diff/3600)+"時間前";if(diff<86400*7)return Math.floor(diff/86400)+"日前";return dt.toLocaleDateString("ja-JP",{month:"long",day:"numeric"});}
   function thumb(item){var m=item.querySelector("content");if(m&&m.getAttribute("url"))return m.getAttribute("url");var e=item.querySelector("enclosure");if(e&&e.getAttribute("url"))return e.getAttribute("url");var d=item.querySelector("description");if(d){var r=d.textContent||"";var x=r.match(/https:\/\/assets\.st-note\.com\/[^\s"'<>]+(?:\.png|\.jpg|\.jpeg|\.webp)/i);if(x)return x[0];}return null;}
   var fallback=[
-    {title:"【お受験ガイド通信No.50】小学校受験は意外と何とかなる。元教室長が伝える、心がフッと軽くなるお話",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/269631965/rectangle_large_type_2_51e8135d0aef989811cec6b159b0b1e5.png",date:"7時間前",tag:"メンタルケア"},
-    {title:"【お受験ガイド】精華小学校の魅力を全部書きます〜中学受験に強いと言われる理由〜",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/269509676/rectangle_large_type_2_67293dedc86470ebdee66adab8747040.png",date:"20時間前",tag:"学校別分析"},
-    {title:"【お受験ガイド通信No.49】小学校受験最大の壁「夫婦の温度差」〜連休前にすり合わせたい「家庭の軸」〜",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/269285942/rectangle_large_type_2_c768d538351762f7a5ea77fb0a2b2354.png",date:"1日前",tag:"夫婦・家庭"},
-    {title:"【お受験ガイド通信No.48】合否を分ける「模試」の本当の意味と、３つの模試の戦略的活用法",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/269001214/rectangle_large_type_2_a7278ae737f2808335cecf15f0f93f67.png",date:"2日前",tag:"模試対策"},
-    {title:"【お受験ガイド通信No.47】小学校入試 4月中に見直したい生活習慣チェックリスト〜新学期に身につけておきたい基本〜",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/268740072/rectangle_large_type_2_ca8cb6122ce382a17bb00ed128a4bc3e.png",date:"3日前",tag:"生活習慣"},
-    {title:"【お受験ガイド通信No.46】小学校受験の子供のストレス〜小さなSOSを見逃さないために親ができること〜",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/268458824/rectangle_large_type_2_c5963c37e134484a8b2bebda2f027ac0.png",date:"4日前",tag:"メンタルケア"}
+    {title:"【お受験ガイド】成蹊小学校の本当の魅力はどこなのか〜元教室長の視点で、合う家庭・伸びる子・危ないミスマッチまで本音で書く〜",url:"https://note.com/mezasegokaku/n/n14eaf38faf3f",img:"https://assets.st-note.com/production/uploads/images/270012345/rectangle_large_type_2_seikei.png",date:"10時間前",tag:"学校別分析"},
+    {title:"【お受験ガイド通信】小学校受験の夏期講習は、全部出なくていい〜伸びる家庭が実践している「講座の選び方」と、秋に失速しないための取捨選択〜",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/269631965/rectangle_large_type_2_51e8135d0aef989811cec6b159b0b1e5.png",date:"21時間前",tag:"夏期講習"},
+    {title:"【お受験ガイド通信】小学校受験で夫婦喧嘩になる理由と、それでも一緒に乗り越えるための処方箋〜どちらにも子どもを思う気持ちがあります〜",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/269509676/rectangle_large_type_2_67293dedc86470ebdee66adab8747040.png",date:"1日前",tag:"夫婦・家庭"},
+    {title:"【お受験ガイド】開智小学校の本当の魅力はどこなのか〜元教室長の視点で、つながる価値・伸びる家庭・今後さらに注目される理由まで本音で書く〜",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/269285942/rectangle_large_type_2_c768d538351762f7a5ea77fb0a2b2354.png",date:"1日前",tag:"学校別分析"},
+    {title:"【お受験ガイド】青山学院大学系属 浦和ルーテル学院小学校の本当の魅力はどこなのか〜青山学院へつながる価値、伸びる家庭、これから注目される理由まで本音で書く〜",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/269001214/rectangle_large_type_2_a7278ae737f2808335cecf15f0f93f67.png",date:"1日前",tag:"学校別分析"},
+    {title:"【お受験ガイド】東京女学館小学校の面接で聞かれる「すずかけ・つばさ・とびら・インクルーシブ・リーダーシップ」完全対策",url:"https://note.com/mezasegokaku/n/nfc854a91d916",img:"https://assets.st-note.com/production/uploads/images/268458824/rectangle_large_type_2_c5963c37e134484a8b2bebda2f027ac0.png",date:"1日前",tag:"面接対策"}
   ];
   function renderCards(items){
     return items.map(function(a){
@@ -457,6 +514,32 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
     grid.innerHTML=renderCards(fallback);
   }
 })();
+</script>
+
+<script>
+function sendMail(e){
+  e.preventDefault();
+  var name=document.getElementById("f-name").value;
+  var email=document.getElementById("f-email").value;
+  var type=document.getElementById("f-type").value||"未選択";
+  var msg=document.getElementById("f-message").value;
+  var btn=document.getElementById("f-btn");
+  var status=document.getElementById("f-status");
+  var subject=encodeURIComponent("【お受験ガイド】お問い合わせ："+type);
+  var body=encodeURIComponent(
+    "お名前："+name+"\n"+
+    "メールアドレス："+email+"\n"+
+    "種別："+type+"\n\n"+
+    "【お問い合わせ内容】\n"+msg+"\n\n"+
+    "---\nお受験ガイド お問い合わせフォームより"
+  );
+  var mailto="mailto:umayokohama@gmail.com?subject="+subject+"&body="+body;
+  window.location.href=mailto;
+  btn.disabled=true;
+  status.className="form-note success";
+  status.textContent="メールアプリが開きます。送信ボタンを押して送信を完了してください。";
+  setTimeout(function(){btn.disabled=false;},3000);
+}
 </script>
 </body>
 </html>
