@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>お受験ガイド｜山口健太【元教室長・社会教育士・キャリアコンサルタント】</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --pink-deep:#c2567a;--pink-mid:#e07899;--pink-soft:#f4b8cc;
+  --pink-pale:#fde8f0;--pink-bg:#fff5f8;--rose-dark:#8c2a4a;
+  --gold:#c9943a;--gold-light:#f5d87a;--gold-bg:#fdf8ee;--gold-border:#e8d0a0;
+  --text:#2a1a20;--text2:#5a3a45;--text3:#9a7080;
+  --serif:"Noto Serif JP",serif;--sans:"Noto Sans JP",sans-serif;
+}
+body{font-family:var(--sans);background:#fff;color:var(--text);overflow-x:hidden}
+
+/* NAV */
+nav{background:var(--pink-deep);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.nav-logo{font-family:var(--serif);color:#fff;font-size:14px;font-weight:700;letter-spacing:.06em}
+.nav-cta{background:#fff;color:var(--pink-deep);font-size:12px;font-weight:700;padding:8px 18px;border-radius:20px;text-decoration:none;letter-spacing:.05em;white-space:nowrap}
+.nav-cta:hover{background:var(--pink-pale)}
+
+/* HERO */
+.hero{background:linear-gradient(150deg,#f9d0de 0%,#fce8f2 50%,#fff0f5 100%);padding:60px 24px 56px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-40px;right:-60px;width:280px;height:280px;border:1.5px solid rgba(194,86,122,.15);border-radius:50%;pointer-events:none}
+.hero::after{content:"";position:absolute;bottom:-60px;left:-40px;width:220px;height:220px;border:1.5px solid rgba(194,86,122,.1);border-radius:50%;pointer-events:none}
+.hero-eyebrow{display:inline-block;background:rgba(194,86,122,.12);border:1px solid rgba(194,86,122,.3);color:var(--pink-deep);font-size:11px;letter-spacing:.15em;padding:5px 16px;border-radius:20px;margin-bottom:20px;font-weight:700}
+.hero h1{font-family:var(--serif);color:var(--rose-dark);font-size:clamp(20px,5vw,34px);font-weight:700;line-height:1.6;margin-bottom:14px}
+.hero h1 em{color:var(--pink-deep);font-style:normal;border-bottom:2px solid var(--pink-soft)}
+.hero-sub{color:var(--text2);font-size:13px;line-height:2;margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:32px}
+.badge{background:#fff;border:1px solid var(--pink-soft);color:var(--pink-deep);font-size:11px;padding:5px 13px;border-radius:16px;letter-spacing:.05em}
+.hero-btn{display:inline-block;background:var(--pink-deep);color:#fff;font-weight:700;font-size:15px;padding:16px 40px;border-radius:30px;text-decoration:none;letter-spacing:.06em;box-shadow:0 4px 18px rgba(194,86,122,.3)}
+.hero-btn:hover{background:var(--rose-dark)}
+.hero-btn-note{color:var(--text3);font-size:11px;margin-top:10px}
+
+/* STATS */
+.stats-bar{background:#fff;border-top:3px solid var(--pink-soft);border-bottom:1px solid #f0d8e0;padding:24px;display:flex;flex-wrap:wrap;justify-content:center}
+.stat-item{flex:1;min-width:120px;max-width:200px;text-align:center;padding:12px 16px;border-right:1px solid #f0d8e0}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--pink-deep);line-height:1}
+.stat-unit{font-size:12px;color:var(--pink-deep);font-weight:700}
+.stat-label{font-size:11px;color:var(--text3);margin-top:4px;letter-spacing:.05em}
+
+/* SECTIONS */
+section{padding:56px 24px}
+.section-eyebrow{font-size:11px;letter-spacing:.2em;color:var(--pink-mid);font-weight:700;text-align:center;margin-bottom:10px}
+.section-title{font-family:var(--serif);font-size:clamp(18px,4vw,26px);font-weight:700;color:var(--rose-dark);text-align:center;margin-bottom:8px;line-height:1.5}
+.section-lead{font-size:13px;color:var(--text2);text-align:center;line-height:2;margin-bottom:8px;max-width:540px;margin-left:auto;margin-right:auto}
+.section-divider{width:40px;height:2px;background:var(--pink-soft);margin:12px auto 36px}
+
+/* PAIN */
+.pain-section{background:var(--pink-bg)}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:720px;margin:0 auto}
+.pain-card{background:#fff;border-left:3px solid var(--pink-mid);padding:16px 18px;border-radius:0 8px 8px 0;box-shadow:0 1px 6px rgba(194,86,122,.07)}
+.pain-icon{font-size:22px;margin-bottom:8px}
+.pain-text{font-size:13px;color:var(--text2);line-height:1.9}
+.pain-text strong{color:var(--rose-dark);font-weight:700}
+
+/* PROFILE */
+.profile-section{background:linear-gradient(135deg,#f7c5d5 0%,#fde8f0 100%)}
+.profile-wrap{display:flex;flex-wrap:wrap;gap:36px;max-width:680px;margin:0 auto;align-items:flex-start}
+.profile-img-wrap{flex:0 0 130px;text-align:center}
+.profile-avatar{width:110px;height:110px;border-radius:50%;overflow:hidden;border:3px solid #fff;box-shadow:0 4px 20px rgba(194,86,122,.25);margin:0 auto 12px;background:var(--pink-soft)}
+.profile-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.profile-name{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--rose-dark);text-align:center}
+.profile-role{font-size:11px;color:var(--pink-deep);text-align:center;margin-top:4px;font-weight:700}
+.profile-body{flex:1;min-width:220px}
+.profile-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.profile-tag{background:rgba(194,86,122,.1);border:1px solid rgba(194,86,122,.3);color:var(--rose-dark);font-size:11px;padding:4px 10px;border-radius:12px}
+.profile-desc{font-size:13px;color:var(--text2);line-height:2}
+
+/* CONTENT */
+.content-section{background:#fff}
+.content-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:720px;margin:0 auto}
+.content-card{background:var(--pink-bg);border:1px solid #f0d8e0;border-radius:10px;padding:20px}
+.content-card:hover{box-shadow:0 4px 16px rgba(194,86,122,.1)}
+.content-tag{font-size:10px;letter-spacing:.1em;color:var(--pink-deep);font-weight:700;background:rgba(194,86,122,.12);display:inline-block;padding:3px 10px;border-radius:10px;margin-bottom:10px}
+.content-card h3{font-family:var(--serif);font-size:14px;font-weight:700;color:var(--rose-dark);line-height:1.6;margin-bottom:8px}
+.content-card p{font-size:12px;color:var(--text3);line-height:1.8}
+
+/* LATEST ARTICLES */
+.articles-section{background:var(--pink-bg)}
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:940px;margin:0 auto 28px}
+.article-card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #f0d8e0;text-decoration:none;display:block;transition:box-shadow .2s,transform .15s}
+.article-card:hover{box-shadow:0 6px 24px rgba(194,86,122,.15);transform:translateY(-2px)}
+.thumb-wrap{width:100%;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,#fce8f2,#f4b8cc)}
+.thumb-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:16px;font-family:var(--serif);font-size:12px;color:var(--pink-deep);text-align:center;line-height:1.6}
+.article-body{padding:14px 16px 16px}
+.article-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--pink-deep);background:rgba(194,86,122,.1);padding:3px 9px;border-radius:10px;margin-bottom:8px}
+.article-title{font-family:var(--serif);font-size:13px;font-weight:700;color:var(--rose-dark);line-height:1.7;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.article-meta{display:flex;align-items:center;justify-content:space-between}
+.article-date{font-size:11px;color:var(--text3)}
+.article-arrow{font-size:12px;color:var(--pink-mid);font-weight:700}
+.status-bar{text-align:center;margin-bottom:20px;font-size:11px;color:var(--text3)}
+.view-more-wrap{text-align:center}
+.view-more-btn{display:inline-block;background:var(--pink-deep);color:#fff;font-size:13px;font-weight:700;padding:14px 36px;border-radius:30px;text-decoration:none;letter-spacing:.08em;box-shadow:0 4px 16px rgba(194,86,122,.3)}
+.view-more-btn:hover{background:var(--rose-dark)}
+.auto-note{display:inline-block;background:#fff;border:1px solid #f0d8e0;border-radius:12px;padding:3px 10px;font-size:10px;color:var(--text3);margin-top:8px}
+
+/* SKELETON */
+.skeleton-card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #f0d8e0}
+.skeleton-thumb{width:100%;aspect-ratio:16/9;background:linear-gradient(90deg,#fce8f2 25%,#fde8f0 50%,#fce8f2 75%);background-size:200% 100%;animation:shimmer 1.4s infinite}
+.skeleton-body{padding:14px 16px 16px}
+.skeleton-line{height:12px;border-radius:6px;background:linear-gradient(90deg,#fce8f2 25%,#fde8f0 50%,#fce8f2 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;margin-bottom:10px}
+.skeleton-line.w80{width:80%}.skeleton-line.w60{width:60%}.skeleton-line.w90{width:90%}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* PLANS */
+.plans-section{background:#fff}
+.plans-row{display:flex;flex-wrap:wrap;gap:18px;max-width:820px;margin:0 auto 20px;justify-content:center}
+.plan-card{background:#fff;border:1.5px solid #f0d8e0;border-radius:16px;padding:26px 22px 22px;flex:1;min-width:210px;max-width:250px;position:relative;display:flex;flex-direction:column}
+.plan-card.featured{border-color:var(--pink-mid);box-shadow:0 4px 24px rgba(194,86,122,.14)}
+.plans-row-premium{display:flex;flex-wrap:wrap;gap:18px;max-width:600px;margin:0 auto 36px;justify-content:center}
+.plan-card-premium{background:#fff;border:2px solid var(--gold);border-radius:16px;padding:28px 24px 24px;flex:1;min-width:240px;max-width:280px;position:relative;display:flex;flex-direction:column;box-shadow:0 6px 28px rgba(201,148,58,.13)}
+.plan-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:700;padding:4px 14px;border-radius:12px;white-space:nowrap;letter-spacing:.06em}
+.badge-popular{background:var(--pink-deep);color:#fff}
+.badge-premium{background:linear-gradient(90deg,var(--gold),var(--gold-light));color:#6b3e00}
+.plan-name{font-family:var(--serif);font-size:13px;font-weight:700;color:var(--rose-dark);margin-bottom:14px;line-height:1.6;text-align:center;min-height:42px;display:flex;align-items:center;justify-content:center}
+.plan-name-premium{font-family:var(--serif);font-size:14px;font-weight:700;color:#3a2400;margin-bottom:14px;line-height:1.6;text-align:center;min-height:42px;display:flex;align-items:center;justify-content:center}
+.plan-price{text-align:center;margin-bottom:16px;padding-bottom:14px;border-bottom:1px dashed #f0d8e0}
+.price-num{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--pink-deep)}
+.price-num-gold{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--gold)}
+.price-unit{font-size:12px;color:var(--text3)}
+.plan-features{list-style:none;font-size:12px;color:var(--text2);line-height:2.3;flex:1}
+.plan-features li{display:flex;gap:6px;align-items:flex-start}
+.plan-features li::before{content:"✓";color:var(--pink-mid);font-weight:700;flex-shrink:0;margin-top:1px}
+.plan-features-gold li::before{content:"✓";color:var(--gold);font-weight:700;flex-shrink:0;margin-top:1px}
+.plan-btn{display:block;text-align:center;margin-top:18px;padding:12px;border-radius:24px;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.06em;border:1px solid var(--pink-soft);background:var(--pink-pale);color:var(--pink-deep)}
+.plan-btn:hover{background:var(--pink-soft)}
+.plan-btn-featured{background:var(--pink-deep);color:#fff;border-color:var(--pink-deep)}
+.plan-btn-featured:hover{background:var(--rose-dark)}
+.plan-btn-gold{background:linear-gradient(90deg,var(--gold),var(--gold-light));color:#3a2400;border:none;font-size:13px;padding:13px}
+.plan-btn-gold:hover{opacity:.9}
+.premium-label{text-align:center;margin:8px 0 24px}
+.premium-label span{display:inline-block;background:linear-gradient(90deg,var(--gold),var(--gold-light));color:#3a2400;font-size:11px;font-weight:700;padding:5px 20px;border-radius:20px;letter-spacing:.1em}
+.compare-note{text-align:center;font-size:11px;color:var(--text3);margin-top:4px}
+
+/* TESTIMONIALS */
+.testimonials-section{background:var(--pink-bg)}
+.plan-group{max-width:760px;margin:0 auto 44px}
+.plan-label{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.plan-label-badge-pink{background:var(--pink-deep);color:#fff;font-size:11px;font-weight:700;padding:5px 14px;border-radius:20px;letter-spacing:.05em;white-space:nowrap}
+.plan-label-badge-gold{background:linear-gradient(90deg,var(--gold),var(--gold-light));color:#3a2400;font-size:11px;font-weight:700;padding:5px 14px;border-radius:20px;letter-spacing:.05em;white-space:nowrap}
+.plan-label-badge-full{background:#3a2400;color:var(--gold-light);font-size:11px;font-weight:700;padding:5px 14px;border-radius:20px;letter-spacing:.05em;white-space:nowrap}
+.plan-label-line{flex:1;height:1px;background:#f0d8e0}
+.plan-label-line-gold{flex:1;height:1px;background:var(--gold-border)}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.testi-card{background:#fff;border-radius:12px;padding:20px;border:1px solid #f0d8e0}
+.testi-card-gold{background:var(--gold-bg);border-radius:12px;padding:20px;border:1px solid var(--gold-border)}
+.testi-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.av-pink-a{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#e07899,#f4b8cc);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;font-family:var(--serif);flex-shrink:0}
+.av-pink-b{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#c2567a,#e07899);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;font-family:var(--serif);flex-shrink:0}
+.av-gold-a{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;color:#3a2400;font-size:13px;font-weight:700;font-family:var(--serif);flex-shrink:0}
+.av-gold-b{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#3a2400,var(--gold));display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:13px;font-weight:700;font-family:var(--serif);flex-shrink:0}
+.testi-name{font-size:13px;font-weight:700;color:var(--rose-dark)}
+.testi-name-gold{font-size:13px;font-weight:700;color:#3a2400}
+.testi-meta{font-size:11px;color:var(--text3);margin-top:2px}
+.stars-pink{color:var(--pink-mid);font-size:13px;margin-bottom:10px;letter-spacing:2px}
+.stars-gold{color:var(--gold);font-size:13px;margin-bottom:10px;letter-spacing:2px}
+.testi-text{font-size:12px;color:var(--text2);line-height:2;border-left:2px solid var(--pink-soft);padding-left:12px}
+.testi-text-gold{font-size:12px;color:#4a3000;line-height:2;border-left:2px solid var(--gold-border);padding-left:12px}
+.premium-divider{text-align:center;margin:8px 0 36px}
+.premium-divider span{display:inline-block;background:linear-gradient(90deg,var(--gold),var(--gold-light));color:#3a2400;font-size:11px;font-weight:700;padding:5px 20px;border-radius:20px;letter-spacing:.1em}
+
+/* CTA */
+.cta-section{background:linear-gradient(135deg,var(--pink-deep) 0%,var(--rose-dark) 100%);padding:56px 24px;text-align:center}
+.cta-section h2{font-family:var(--serif);color:#fff;font-size:clamp(18px,4vw,26px);font-weight:700;line-height:1.6;margin-bottom:16px}
+.cta-section h2 em{color:var(--gold-light);font-style:normal}
+.cta-section p{color:rgba(255,255,255,.75);font-size:13px;margin-bottom:32px;line-height:2}
+.cta-btn-wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.cta-primary{display:inline-block;background:#fff;color:var(--pink-deep);font-weight:700;font-size:14px;padding:16px 36px;border-radius:30px;text-decoration:none;letter-spacing:.06em;box-shadow:0 4px 16px rgba(0,0,0,.15)}
+.cta-primary:hover{background:var(--pink-pale)}
+.cta-secondary{display:inline-block;background:transparent;color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.4);font-size:13px;padding:15px 28px;border-radius:30px;text-decoration:none}
+.cta-secondary:hover{border-color:rgba(255,255,255,.8);color:#fff}
+footer{background:var(--rose-dark);color:rgba(255,255,255,.45);font-size:11px;text-align:center;padding:20px}
+footer a{color:rgba(255,255,255,.6);text-decoration:none}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">お受験ガイド｜山口健太</span>
+  <a href="https://note.com/mezasegokaku/membership" class="nav-cta" target="_blank">今すぐ読む →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">元教室長が本音で伝える小学校受験の戦略メディア</div>
+  <h1>合否を分けるのは、<br><em>「見えない部分」</em>を知っているかどうか</h1>
+  <p class="hero-sub">塾には教えてもらえない裏戦略・面接の本音・願書で差がつく書き方。<br>国家資格者×元教室長×受験合格保護者の視点からリアルな情報をお届けします。</p>
+  <div class="hero-badges">
+    <span class="badge">元教室長</span>
+    <span class="badge">社会教育士</span>
+    <span class="badge">キャリアコンサルタント</span>
+    <span class="badge">娘の受験経験あり・全合格</span>
+    <span class="badge">毎月50本以上更新</span>
+  </div>
+  <a href="https://note.com/mezasegokaku/membership" class="hero-btn" target="_blank">メンバーシップで読み放題にする</a>
+  <p class="hero-btn-note">月額¥980〜｜いつでも解約可</p>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item"><div><span class="stat-num">280</span><span class="stat-unit">本以上</span></div><div class="stat-label">有料記事（随時追加）</div></div>
+  <div class="stat-item"><div><span class="stat-num">50</span><span class="stat-unit">本/月</span></div><div class="stat-label">記事更新ペース</div></div>
+  <div class="stat-item"><div><span class="stat-num">85</span><span class="stat-unit">名</span></div><div class="stat-label">メンバー参加中</div></div>
+  <div class="stat-item"><div><span class="stat-num">¥980</span><span class="stat-unit">/月〜</span></div><div class="stat-label">全記事読み放題</div></div>
+</div>
+
+<!-- PAIN -->
+<section class="pain-section">
+  <p class="section-eyebrow">COMMON WORRIES</p>
+  <h2 class="section-title">こんな不安、ありませんか？</h2>
+  <div class="section-divider"></div>
+  <div class="pain-grid">
+    <div class="pain-card"><div class="pain-icon">😰</div><p class="pain-text"><strong>塾に任せているだけで大丈夫？</strong><br>塾では教えてくれない「合否を左右するポイント」が確かに存在します。</p></div>
+    <div class="pain-card"><div class="pain-icon">📝</div><p class="pain-text"><strong>願書の書き方が分からない</strong><br>「教育方針」の書き方ひとつで印象が大きく変わります。差がつくポイントを解説。</p></div>
+    <div class="pain-card"><div class="pain-icon">👨‍👩‍👧</div><p class="pain-text"><strong>夫婦で温度差がある</strong><br>お受験の「夫婦連携」は合格に直結します。すり合わせ方を具体的に解説。</p></div>
+    <div class="pain-card"><div class="pain-icon">🏫</div><p class="pain-text"><strong>志望校をどう絞ればいい？</strong><br>学校別のリアルな傾向と、家庭に合った選び方の軸を提供します。</p></div>
+    <div class="pain-card"><div class="pain-icon">🧒</div><p class="pain-text"><strong>子どものペースが心配</strong><br>行動観察・ペーパー・運動。わが子に合った準備の進め方が分からないと感じていませんか。</p></div>
+    <div class="pain-card"><div class="pain-icon">💼</div><p class="pain-text"><strong>共働きで時間が足りない</strong><br>仕事を続けながら受験準備を両立する具体的なスケジュール術をお伝えします。</p></div>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section class="profile-section">
+  <p class="section-eyebrow">ABOUT THE AUTHOR</p>
+  <h2 class="section-title">編集長 山口健太について</h2>
+  <div class="section-divider"></div>
+  <div class="profile-wrap">
+    <div class="profile-img-wrap">
+      <div class="profile-avatar"><img id="prof-img" alt="山口健太"></div>
+      <p class="profile-name">山口 健太</p>
+      <p class="profile-role">お受験ガイド編集長</p>
+    </div>
+    <div class="profile-body">
+      <div class="profile-tags">
+        <span class="profile-tag">元小学校受験教室長</span>
+        <span class="profile-tag">社会教育士</span>
+        <span class="profile-tag">キャリアコンサルタント</span>
+        <span class="profile-tag">私立・国立　全合格</span>
+      </div>
+      <p class="profile-desc">小学校受験専門の教室で教室長として指導経験を積み、国家資格であるキャリアコンサルタント・社会教育士を取得。自身も娘の受験を経験し、私立・国立すべての志望校で合格を勝ち取った。<br><br>教室長として見てきた「受かる家庭・落ちる家庭の違い」、面接官が本当に見ているポイント、一般には出てこない合格戦略を毎月50本以上の記事で配信中。</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="content-section">
+  <p class="section-eyebrow">CONTENT LINEUP</p>
+  <h2 class="section-title">記事コンテンツの例</h2>
+  <div class="section-divider"></div>
+  <div class="content-grid">
+    <div class="content-card"><span class="content-tag">学校別分析</span><h3>慶應横浜初等部・精華小など人気校を徹底解説</h3><p>各校の出題傾向・面接の実態・家庭に求められるものを元教室長視点でまとめた学校別ガイド。</p></div>
+    <div class="content-card"><span class="content-tag">願書対策</span><h3>「教育方針」の書き方で合否が変わる</h3><p>審査側の目線で読まれる願書の構造とNG例・OK例を具体的に解説します。</p></div>
+    <div class="content-card"><span class="content-tag">面接対策</span><h3>面接官が本当に見ているポイント</h3><p>よく言われる「マナー」より大切な、家庭の「軸」が伝わる話し方と準備法。</p></div>
+    <div class="content-card"><span class="content-tag">行動観察</span><h3>受かる子・落ちる子の違いは家庭環境にある</h3><p>行動観察で評価される「自律心」「協調性」をご家庭でどう育てるか、実践的に解説。</p></div>
+    <div class="content-card"><span class="content-tag">メンタルケア</span><h3>共働き家庭がお受験を乗り越えるための時間術</h3><p>仕事と受験準備の両立。親御さん自身のメンタルマネジメントも含めてサポート。</p></div>
+    <div class="content-card"><span class="content-tag">模試活用</span><h3>模試の本当の意味と戦略的な活用法</h3><p>3種の模試を何のために受けるのか、結果をどう読んでどう動くか。合否への繋げ方。</p></div>
+  </div>
+</section>
+
+<!-- LATEST ARTICLES -->
+<section class="articles-section">
+  <p class="section-eyebrow">LATEST ARTICLES</p>
+  <h2 class="section-title">最新記事</h2>
+  <div class="section-divider"></div>
+  <div class="status-bar" id="art-status">記事を読み込み中...</div>
+  <div class="articles-grid" id="articles-grid">
+    <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line w80"></div><div class="skeleton-line w90"></div><div class="skeleton-line w60"></div></div></div>
+    <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line w80"></div><div class="skeleton-line w90"></div><div class="skeleton-line w60"></div></div></div>
+    <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line w80"></div><div class="skeleton-line w90"></div><div class="skeleton-line w60"></div></div></div>
+    <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line w80"></div><div class="skeleton-line w90"></div><div class="skeleton-line w60"></div></div></div>
+    <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line w80"></div><div class="skeleton-line w90"></div><div class="skeleton-line w60"></div></div></div>
+    <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-body"><div class="skeleton-line w80"></div><div class="skeleton-line w90"></div><div class="skeleton-line w60"></div></div></div>
+  </div>
+  <div class="view-more-wrap">
+    <a href="https://note.com/mezasegokaku" class="view-more-btn" target="_blank">記事をもっと見る（note）→</a>
+    <br><span class="auto-note">↻ ページを開くたびに最新記事を自動取得</span>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="plans-section">
+  <p class="section-eyebrow">MEMBERSHIP PLANS</p>
+  <h2 class="section-title">メンバーシッププラン</h2>
+  <p class="section-lead">いつでも解約可。入会後は過去記事もすべて読み放題です。</p>
+  <div class="section-divider"></div>
+  <div class="plans-row">
+    <div class="plan-card">
+      <p class="plan-name">スタンダード<br>読み放題プラン</p>
+      <div class="plan-price"><span class="price-num">¥980</span><span class="price-unit"> / 月</span></div>
+      <ul class="plan-features"><li>280本以上の記事読み放題</li><li>毎月50本以上追加</li><li>学校別分析・願書・面接</li><li>メッセージで質問・相談可</li></ul>
+      <a href="https://note.com/mezasegokaku/membership" class="plan-btn" target="_blank">このプランで始める</a>
+    </div>
+    <div class="plan-card featured">
+      <span class="plan-badge badge-popular">人気No.1</span>
+      <p class="plan-name">読み放題＋<br>毎月個別相談プラン</p>
+      <div class="plan-price"><span class="price-num">¥7,980</span><span class="price-unit"> / 月</span></div>
+      <ul class="plan-features"><li>スタンダードの全内容</li><li>月1回45分オンライン相談</li><li>願書添削・模擬面接</li><li>合格戦略マンツーマン立案</li><li>親御様のメンタルケア</li></ul>
+      <a href="https://note.com/mezasegokaku/membership" class="plan-btn plan-btn-featured" target="_blank">このプランで始める</a>
+    </div>
+    <div class="plan-card">
+      <p class="plan-name">フルサービス<br>完全伴走プラン</p>
+      <div class="plan-price"><span class="price-num">¥9,800</span><span class="price-unit"> / 月</span></div>
+      <ul class="plan-features"><li>全プランの内容を包含</li><li>教育方針・志望動機をゼロから言語化</li><li>願書作成代行レベルのサポート</li><li>面接練習（回数無制限）</li><li>24時間LINE相談</li></ul>
+      <a href="https://note.com/mezasegokaku/membership" class="plan-btn" target="_blank">このプランで始める</a>
+    </div>
+  </div>
+  <div class="premium-label"><span>✦ 本気で合格を目指す方へのプレミアムプラン ✦</span></div>
+  <div class="plans-row-premium">
+    <div class="plan-card-premium">
+      <span class="plan-badge badge-premium">上位プラン</span>
+      <p class="plan-name-premium">記事＋願書構築・添削<br>＋24時間LINE&電話相談プラン</p>
+      <div class="plan-price" style="border-bottom:1px dashed var(--gold-border)"><span class="price-num-gold">¥11,000</span><span class="price-unit"> / 月</span></div>
+      <ul class="plan-features plan-features-gold"><li>記事280本以上読み放題</li><li>教育方針・志望動機をゼロから言語化</li><li>願書構築・添削（複数校対応）</li><li>24時間LINE相談</li><li>電話相談受付</li><li>合格戦略を二人三脚で構築</li></ul>
+      <a href="https://note.com/mezasegokaku/membership" class="plan-btn plan-btn-gold" target="_blank">このプランで始める</a>
+    </div>
+    <div class="plan-card-premium">
+      <span class="plan-badge" style="background:#3a2400;color:var(--gold-light)">模擬面接付き</span>
+      <p class="plan-name-premium">フルプラン　記事＋願書添削<br>＋模擬面接＋24時間LINE直通＋</p>
+      <div class="plan-price" style="border-bottom:1px dashed var(--gold-border)"><span class="price-num-gold">¥14,800</span><span class="price-unit"> / 月</span></div>
+      <ul class="plan-features plan-features-gold"><li>記事読み放題（内容リクエスト可）</li><li>願書添削（複数校可能）</li><li>WEB模擬面接・面接対策</li><li>WEB相談＋LINE相談（24時間）</li><li>合格への全プロセスを完全サポート</li><li>最短距離で第一志望合格を目指す</li></ul>
+      <a href="https://note.com/mezasegokaku/membership" class="plan-btn plan-btn-gold" target="_blank">このプランで始める</a>
+    </div>
+  </div>
+  <p class="compare-note">※すべてのプランはいつでも解約可能です　※上位プランは下位プランの内容をすべて包含します</p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <p class="section-eyebrow">MEMBER VOICES</p>
+  <h2 class="section-title">読者の声</h2>
+  <div class="section-divider"></div>
+  <div class="plan-group">
+    <div class="plan-label"><span class="plan-label-badge-pink">スタンダード読み放題プラン ¥980/月</span><span class="plan-label-line"></span></div>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="testi-header"><div class="av-pink-a">M</div><div><p class="testi-name">30代・専業主婦</p><p class="testi-meta">東京都在住・年長女児のお母様</p></div></div><div class="stars-pink">★★★★★</div><p class="testi-text">塾の先生には聞きにくい「願書の本音」がここには全部書いてありました。月980円でこれだけ読めるなら、むしろ入らない理由がないと思います。志望校の学校別ページは何度も読み返しています。</p></div>
+      <div class="testi-card"><div class="testi-header"><div class="av-pink-b">K</div><div><p class="testi-name">30代・共働き・女性</p><p class="testi-meta">神奈川県在住・年中男児のお母様</p></div></div><div class="stars-pink">★★★★★</div><p class="testi-text">毎日更新されるので受験期間中ずっと「伴走してもらっている感覚」がありました。特に行動観察の記事は目からウロコで、子どもへの関わり方がガラッと変わりました。合格できて本当によかったです。</p></div>
+    </div>
+  </div>
+  <div class="plan-group">
+    <div class="plan-label"><span class="plan-label-badge-pink">読み放題＋毎月個別相談プラン ¥7,980/月</span><span class="plan-label-line"></span></div>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="testi-header"><div class="av-pink-a">Y</div><div><p class="testi-name">40代・共働き・女性</p><p class="testi-meta">東京都在住・年長女児のお母様</p></div></div><div class="stars-pink">★★★★★</div><p class="testi-text">夫婦間の温度差に悩んでいた時期に個別相談を申し込みました。キャリアコンサルタントとしての視点で夫へのアプローチ方法まで一緒に考えてくださり、受験を家族で乗り越える覚悟ができました。</p></div>
+      <div class="testi-card"><div class="testi-header"><div class="av-pink-b">S</div><div><p class="testi-name">30代・共働き・女性</p><p class="testi-meta">埼玉県在住・年長男児のお母様</p></div></div><div class="stars-pink">★★★★★</div><p class="testi-text">願書の添削をしていただいて「教育方針」の書き方が根本から変わりました。自分では気づかなかった「家庭の強み」を引き出してくださる45分で、毎月の相談が受験の軸になっていました。</p></div>
+    </div>
+  </div>
+  <div class="plan-group">
+    <div class="plan-label"><span class="plan-label-badge-pink">フルサービス完全伴走プラン ¥9,800/月</span><span class="plan-label-line"></span></div>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="testi-header"><div class="av-pink-a">A</div><div><p class="testi-name">40代・共働き・女性</p><p class="testi-meta">東京都在住・年長女児のお母様</p></div></div><div class="stars-pink">★★★★★</div><p class="testi-text">LINEでいつでも相談できる安心感は他では絶対に得られません。夜中に不安になっても翌朝には返信がきていて本当に心強かったです。「教育方針」をゼロから一緒に作っていただき、第一志望に合格できました。</p></div>
+      <div class="testi-card"><div class="testi-header"><div class="av-pink-b">T</div><div><p class="testi-name">30代・共働き・夫婦で参加</p><p class="testi-meta">神奈川県在住・年長男児のご家庭</p></div></div><div class="stars-pink">★★★★★</div><p class="testi-text">夫婦ふたりで相談に参加できたことで受験への認識が揃い家庭内がスムーズになりました。面接練習も何度もお付き合いいただき、本番では想定外の質問にも動じず答えられました。戦略パートナーという言葉がぴったりです。</p></div>
+    </div>
+  </div>
+  <div class="premium-divider"><span>✦ プレミアムプラン会員の声 ✦</span></div>
+  <div class="plan-group">
+    <div class="plan-label"><span class="plan-label-badge-gold">記事＋願書構築・添削＋24時間LINE&電話相談プラン ¥11,000/月</span><span class="plan-label-line-gold"></span></div>
+    <div class="testi-grid">
+      <div class="testi-card-gold"><div class="testi-header"><div class="av-gold-a">N</div><div><p class="testi-name-gold">40代・専業主婦</p><p class="testi-meta">東京都在住・年長女児のお母様</p></div></div><div class="stars-gold">★★★★★</div><p class="testi-text-gold">「教育方針って何を書けばいいのか」という段階から丁寧にヒアリングしていただき、自分たちの言葉で伝わる願書が完成しました。電話で直接話せる安心感は格別で、複数校の添削も全部見ていただけて本当に助かりました。</p></div>
+      <div class="testi-card-gold"><div class="testi-header"><div class="av-gold-b">H</div><div><p class="testi-name-gold">30代・共働き・女性</p><p class="testi-meta">神奈川県在住・年長女児のお母様</p></div></div><div class="stars-gold">★★★★★</div><p class="testi-text-gold">24時間LINEと電話相談がセットで、仕事帰りの夜でも気になることをすぐ聞けました。志望動機の言語化から始まり、最終的には自分でも「この学校じゃなきゃダメな理由」が明確になったことが一番の収穫です。</p></div>
+    </div>
+  </div>
+  <div class="plan-group">
+    <div class="plan-label"><span class="plan-label-badge-full">フルプラン ¥14,800/月【模擬面接付き】</span><span class="plan-label-line-gold"></span></div>
+    <div class="testi-grid">
+      <div class="testi-card-gold"><div class="testi-header"><div class="av-gold-a">R</div><div><p class="testi-name-gold">40代・共働き・女性</p><p class="testi-meta">東京都在住・年長女児のお母様</p></div></div><div class="stars-gold">★★★★★</div><p class="testi-text-gold">複数校の願書添削からWEB模擬面接まで、受験に必要なことをすべてお任せできました。本番直前の模擬面接では「合格者の親の話し方」を徹底的に教えていただき、面接室に入った瞬間から自信が違いました。結果、第一志望に合格できました。</p></div>
+      <div class="testi-card-gold"><div class="testi-header"><div class="av-gold-b">O</div><div><p class="testi-name-gold">30代・共働き・夫婦で参加</p><p class="testi-meta">東京都在住・年長男児のご家庭</p></div></div><div class="stars-gold">★★★★★</div><p class="testi-text-gold">費用を見て一瞬迷いましたが、塾の特訓費と比べたら全然高くないと今は思います。記事のリクエストまでできるので、自分たちが知りたい情報がピンポイントで手に入ります。WEB面接練習を何度もやっていただき、夫婦で本番に臨めました。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>遠回りせず、<em>最短距離で合格</em>を目指すご家庭へ</h2>
+  <p>小学校受験は、親の不安が大きい世界です。<br>だからこそ、本音・裏側・リアルな戦略を共有します。<br>今すぐ読み放題プランで、現場を知る専門家の知見にアクセスしてください。</p>
+  <div class="cta-btn-wrap">
+    <a href="https://note.com/mezasegokaku/membership" class="cta-primary" target="_blank">メンバーシップで読み放題にする　→</a>
+    <a href="https://note.com/mezasegokaku" class="cta-secondary" target="_blank">無料記事をまず読む</a>
+  </div>
+</section>
+
+<footer>
+  <p>© お受験ガイド編集長 山口健太 ｜ <a href="https://note.com/mezasegokaku" target="_blank">note.com/mezasegokaku</a></p>
+</footer>
+
+<script>
+// プロフィール写真
+(function(){
+  var b64="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";
+  var img=document.getElementById("prof-img");
+  if(img){img.src="data:image/jpeg;base64,"+b64;}
+})();
+
+// 最新記事RSS自動取得
+(async function(){
+  var grid=document.getElementById("articles-grid");
+  var stat=document.getElementById("art-status");
+  var PROXY="https://api.allorigins.win/get?url=";
+  var RSS="https://note.com/mezasegokaku/rss";
+  function tag(t){if(!/学校|初等部/.test(t)){}
+    if(/学校|初等部|附属/.test(t))return"学校別分析";
+    if(/願書|志望動機|教育方針/.test(t))return"願書対策";
+    if(/面接/.test(t))return"面接対策";
+    if(/行動観察/.test(t))return"行動観察";
+    if(/模試/.test(t))return"模試対策";
+    if(/夫婦|温度差/.test(t))return"夫婦・家庭";
+    if(/メンタル|不安|ストレス|心/.test(t))return"メンタルケア";
+    if(/共働き|時間/.test(t))return"時間管理";
+    if(/生活習慣|チェック/.test(t))return"生活習慣";
+    return"お受験ガイド";}
+  function rel(d){var dt=new Date(d);if(isNaN(dt))return"";var diff=Math.floor((Date.now()-dt)/1000);if(diff<3600)return Math.floor(diff/60)+"分前";if(diff<86400)return Math.floor(diff/3600)+"時間前";if(diff<86400*7)return Math.floor(diff/86400)+"日前";return dt.toLocaleDateString("ja-JP",{month:"long",day:"numeric"});}
+  function thumb(item){var m=item.querySelector("content");if(m&&m.getAttribute("url"))return m.getAttribute("url");var e=item.querySelector("enclosure");if(e&&e.getAttribute("url"))return e.getAttribute("url");var d=item.querySelector("description");if(d){var r=d.textContent||"";var x=r.match(/https:\/\/assets\.st-note\.com\/[^\s"'<>]+(?:\.png|\.jpg|\.jpeg|\.webp)/i);if(x)return x[0];}return null;}
+  var fallback=[
+    {title:"【お受験ガイド通信No.50】小学校受験は意外と何とかなる。元教室長が伝える、心がフッと軽くなるお話",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/269631965/rectangle_large_type_2_51e8135d0aef989811cec6b159b0b1e5.png",date:"7時間前",tag:"メンタルケア"},
+    {title:"【お受験ガイド】精華小学校の魅力を全部書きます〜中学受験に強いと言われる理由〜",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/269509676/rectangle_large_type_2_67293dedc86470ebdee66adab8747040.png",date:"20時間前",tag:"学校別分析"},
+    {title:"【お受験ガイド通信No.49】小学校受験最大の壁「夫婦の温度差」〜連休前にすり合わせたい「家庭の軸」〜",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/269285942/rectangle_large_type_2_c768d538351762f7a5ea77fb0a2b2354.png",date:"1日前",tag:"夫婦・家庭"},
+    {title:"【お受験ガイド通信No.48】合否を分ける「模試」の本当の意味と、３つの模試の戦略的活用法",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/269001214/rectangle_large_type_2_a7278ae737f2808335cecf15f0f93f67.png",date:"2日前",tag:"模試対策"},
+    {title:"【お受験ガイド通信No.47】小学校入試 4月中に見直したい生活習慣チェックリスト〜新学期に身につけておきたい基本〜",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/268740072/rectangle_large_type_2_ca8cb6122ce382a17bb00ed128a4bc3e.png",date:"3日前",tag:"生活習慣"},
+    {title:"【お受験ガイド通信No.46】小学校受験の子供のストレス〜小さなSOSを見逃さないために親ができること〜",url:"https://note.com/mezasegokaku",img:"https://assets.st-note.com/production/uploads/images/268458824/rectangle_large_type_2_c5963c37e134484a8b2bebda2f027ac0.png",date:"4日前",tag:"メンタルケア"}
+  ];
+  function renderCards(items){
+    return items.map(function(a){
+      var th=a.img?"<img src=\""+a.img+"?width=600&quality=80\" alt=\"\"+a.title+\"\"+\" loading=\"lazy\" onerror=\"this.style.display='none';this.nextElementSibling.style.display='flex'\">":"";
+      var fs=a.img?"display:none":"";
+      return'<a class="article-card" href="'+a.url+'" target="_blank" rel="noopener"><div class="thumb-wrap">'+th+'<div class="thumb-fallback" style="'+fs+'">'+a.title.slice(0,28)+'…</div></div><div class="article-body"><span class="article-tag">'+a.tag+'</span><p class="article-title">'+a.title+'</p><div class="article-meta"><span class="article-date">'+a.date+'</span><span class="article-arrow">noteで読む →</span></div></div></a>';
+    }).join("");
+  }
+  try{
+    var res=await fetch(PROXY+encodeURIComponent(RSS));
+    if(!res.ok)throw new Error();
+    var json=await res.json();
+    var parser=new DOMParser();
+    var xml=parser.parseFromString(json.contents,"text/xml");
+    var items=Array.from(xml.querySelectorAll("item")).slice(0,6);
+    if(!items.length)throw new Error();
+    var cards=items.map(function(item){
+      var title=item.querySelector("title")?item.querySelector("title").textContent.trim():"記事";
+      var link=(item.querySelector("link")?item.querySelector("link").textContent.trim():"")||(item.querySelector("guid")?item.querySelector("guid").textContent.trim():"#");
+      var pubDate=item.querySelector("pubDate")?item.querySelector("pubDate").textContent.trim():"";
+      var th=thumb(item);
+      var tg=tag(title);
+      var thHtml=th?"<img src=\""+th+"?width=600&quality=80\" alt=\""+title+"\" loading=\"lazy\" onerror=\"this.style.display='none';this.nextElementSibling.style.display='flex'\">":"";
+      var fs=th?"display:none":"";
+      return'<a class="article-card" href="'+link+'" target="_blank" rel="noopener"><div class="thumb-wrap">'+thHtml+'<div class="thumb-fallback" style="'+fs+'">'+title.slice(0,28)+'…</div></div><div class="article-body"><span class="article-tag">'+tg+'</span><p class="article-title">'+title+'</p><div class="article-meta"><span class="article-date">'+rel(pubDate)+'</span><span class="article-arrow">noteで読む →</span></div></div></a>';
+    });
+    grid.innerHTML=cards.join("");
+    stat.textContent="最新"+items.length+"件を表示中（自動更新）";
+  }catch(e){
+    stat.innerHTML="<span style=\"color:var(--text3)\">手動データを表示しています</span>";
+    grid.innerHTML=renderCards(fallback);
+  }
+})();
+</script>
+</body>
+</html>
